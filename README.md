@@ -2,6 +2,8 @@
 
 ## 0. 环境准备（Windows PowerShell）
 
+从Release里面下载checkpoint
+
 进入项目根目录（你截图是 `...\deliver\`）后执行：
 
 ```powershell
@@ -20,12 +22,12 @@ $env:PYTHONIOENCODING="utf-8"
 
 ## 1. 只 测试 Baseline
 
-### 1.1 设置 seed 与 ckpt 路径（假设测试seed = 2024）
+### 1.1 设置 seed 与 ckpt 路径（改成实际路径）
 
 
 ```powershell
 $env:MLF_SEED="2024"
-$env:MLF_PRETRAINED_CKPT="checkpoints/baseline/baseline_seed_2024/custom_duet0_MLF_MultiPeriod_128_384_512_768_1024_pl96/0_checkpoint.pth"
+$env:MLF_PRETRAINED_CKPT="checkpoints/baseline_seed_2024_0_checkpoint.pth"
 ```
 
 ### 1.2 运行 eval
@@ -54,11 +56,11 @@ Remove-Item Env:MLF_PRETRAINED_CKPT -ErrorAction SilentlyContinue
 Remove-Item Env:PRELOAD_CKPT -ErrorAction SilentlyContinue
 ```
 
-### 2.2 设置 seed 与 ckpt 路径
+### 2.2 设置 seed 与 ckpt 路径（改成实际路径）
 
 ```powershell
 $env:MLF_SEED="2024"
-$env:MLF_PRETRAINED_CKPT="checkpoints/fusion_stage1/ckpt_route1_duetonly_seed2024_a003_w2000_ep10_lr5e-4/custom_duet1_MLF_MultiPeriod_128_384_512_768_1024_pl96/0_checkpoint.pth"
+$env:MLF_PRETRAINED_CKPT="checkpoints/fusion_seed2024_0_checkpoint.pth"
 ```
 
 ### 2.3 运行 eval
@@ -82,11 +84,11 @@ Remove-Item Env:MLF_PRETRAINED_CKPT -ErrorAction SilentlyContinue
 Remove-Item Env:PRELOAD_CKPT -ErrorAction SilentlyContinue
 ```
 
-### 3.2 设置 seed 与 preload ckpt
+### 3.2 设置 seed 与 preload ckpt（改成实际路径）
 
 ```powershell
 $env:MLF_SEED="2024"
-$env:PRELOAD_CKPT="checkpoints/baseline/baseline_seed_2024/custom_duet0_MLF_MultiPeriod_128_384_512_768_1024_pl96/0_checkpoint.pth"
+$env:PRELOAD_CKPT="checkpoints/baseline_seed_2024_0_checkpoint.pth"
 $env:ROUTE1_DUET_ONLY="1"
 $env:ROUTE1_STAGE="1"
 ```
