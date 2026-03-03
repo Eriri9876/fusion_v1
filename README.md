@@ -13,7 +13,7 @@
 - **静态残差融合**：在固定融合强度（$\alpha=0.05$）下，静态通道掩码注入能带来微弱但稳定的指标增益。
 - **动态联合训练**：解冻 MoE 门控网络后，由于时序数据的强周期性与缺乏负载均衡约束，模型表现出极端的初始化（Seed）敏感性，出现专家负载崩塌。
 
-👉 **[点击此处阅读完整的《实证研究与失效分析报告》PDF] (此处替换为你的PDF链接，例如 ./Empirical_Study_on_MLF_DUET_Fusion.pdf)**
+👉 **[点击./Empirical_Study_on_MLF_DUET_Fusion.pdf阅读完整的《实证研究与失效分析报告》PDF] (此处替换为你的PDF链接，例如 ./Empirical_Study_on_MLF_DUET_Fusion.pdf)**
 
 ---
 
